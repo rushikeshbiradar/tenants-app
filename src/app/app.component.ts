@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  
+  menuWidth: string = "0%";
+
+  public toggleMenu(flag: boolean) {
+    this.menuWidth = flag ? "100%" : "0%";
+  }
+
 }

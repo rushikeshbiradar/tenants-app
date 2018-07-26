@@ -1,1 +1,20 @@
-<router-outlet></router-outlet>
+<nav class="navbar navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Brand</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="toggleMenu(true)">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</nav>
+
+<div id="myNav" class="overlay" [style.width]="menuWidth">
+    <a href="javascript:void(0)" class="closebtn" (click)="toggleMenu(false)">&times;</a>
+    <div class="overlay-content">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+</div>
+
+<div class="container-fluid wrapper">
+    <router-outlet></router-outlet>
+</div>
