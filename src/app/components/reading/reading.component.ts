@@ -5,4 +5,11 @@ import { Component } from '@angular/core';
 })
 
 export class ReadingComponent {
+
+  showAdd: boolean = false;
+
+  toggleShowAdd(flag: boolean) {
+    this.showAdd = flag;
+  }
+
 }

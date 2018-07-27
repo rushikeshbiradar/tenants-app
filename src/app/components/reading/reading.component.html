@@ -1,6 +1,41 @@
 <div class="mainheader d-flex">
     <h5>Readings</h5>
-    <span class="action ml-auto">
+    <span class="action ml-auto" (click)="toggleShowAdd(true)" [hidden]="showAdd">
         <i class="fa fa-plus" aria-hidden="true"></i>&nbsp; Add
     </span>
+</div>
+
+<div class="mainContent">
+
+    <div class="readingList" [hidden]="showAdd">
+
+    </div>
+
+    <div class="addReading" [hidden]="!showAdd">
+        <form>
+            <div class="form-group">
+                <label>Month</label>
+                <select class="form-control">
+                    <option>January</option>
+                    <option>February</option>
+                    <option>March</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>User</label>
+                <select class="form-control">
+                    <option>ABC PQR</option>
+                    <option>MNO XYZ</option>
+                    <option>XYZ PQR</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Reading</label>
+                <input type="number" class="form-control" value="0" />
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-warning" (click)="toggleShowAdd(false)">Cancel</button>
+        </form>
+    </div>
+
 </div>
