@@ -1,3 +1,7 @@
+body {
+    font-family: 'News Cycle', sans-serif !important;
+}
+
 .navbar-brand {
     padding-top: 0;
     padding-bottom: 0;
@@ -50,6 +54,27 @@
 
 .wrapper {
     margin-top: 15px;
+}
+
+.mainContent {
+    margin-bottom: 50px;
+}
+.usersList .card {
+    margin-bottom: 15px;
+}
+
+.usersList .card-body {
+    padding: 1rem;
+}
+
+.usersList .card .cardText {
+    margin-left: 15px;
+    display: inline;
+    vertical-align: top
+}
+
+.usersList label {
+    color: gray;
 }
 
 @media screen and (max-height: 450px) {

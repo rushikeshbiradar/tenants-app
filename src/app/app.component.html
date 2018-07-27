@@ -1,5 +1,7 @@
 <nav class="navbar navbar-dark bg-primary">
-    <a class="navbar-brand" href="#">Brand</a>
+    <a class="navbar-brand" href="#">
+            <i class="fa fa-home" aria-hidden="true"></i>&nbsp;Brand
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" (click)="toggleMenu(true)">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,10 +10,11 @@
 <div id="myNav" class="overlay" [style.width]="menuWidth">
     <a href="javascript:void(0)" class="closebtn" (click)="toggleMenu(false)">&times;</a>
     <div class="overlay-content">
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <a routerLink="/dashboard" routerLinkActive="active" (click)="toggleMenu(false)">Dashboard</a>
+        <a routerLink="/user" routerLinkActive="active" (click)="toggleMenu(false)">Users</a>
+        <a routerLink="/reading" (click)="toggleMenu(false)">R1</a>
+        <a routerLink="/rent" (click)="toggleMenu(false)">R2</a>
+        <a href="#" (click)="toggleMenu(false)">Logout</a>
     </div>
 </div>
 
